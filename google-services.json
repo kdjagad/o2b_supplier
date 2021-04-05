@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "575743724784",
+    "firebase_url": "https://ordertoobook-default-rtdb.firebaseio.com",
+    "project_id": "ordertoobook",
+    "storage_bucket": "ordertoobook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575743724784:android:a6f49db152c6658b554635",
+        "android_client_info": {
+          "package_name": "com.business.ordertobook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575743724784-0rou37j7lc96k4b7orv1ee632u9he1pc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuJkkWTFXaz2fUqgaHwEM8RsugQxJ8wDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575743724784-0rou37j7lc96k4b7orv1ee632u9he1pc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
