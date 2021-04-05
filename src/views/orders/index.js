@@ -388,7 +388,7 @@ export default class OrderList extends React.Component{
         const{layout}=this.state;
         return(
             <List.Item
-            title={`${item.user_name}`}
+            title={`${item.name}`}
             titleNumberOfLines={2}
             titleStyle={{fontSize:20,fontFamily:'fontBold',color:theme_color}}
             onPress={()=>this.props.navigation.navigate('OrderListIndex',{item})}
@@ -396,12 +396,18 @@ export default class OrderList extends React.Component{
                 return(
                 <Block flex={0} justifyContent="center">
                 {
-                    item.profile ?
-                    <Avatar.Image source={{uri:`${site_url}${item.profile}`}} size={40} /> :
-                    <Avatar.Text label={item.cust_name[0]} size={40} backgroundColor="#eee" color={theme_color} />
+                    item.company_profile ?
+                    <Avatar.Image source={{uri:`${site_url}${item.company_profile}`}} size={40} /> :
+                    <Avatar.Text label={item.name[0]} size={40} backgroundColor="#eee" color={theme_color} />
                 }
                 </Block>
             )}}
+            right={()=>(
+                <Block flex={0}>
+                    <Text>Total Orders</Text>
+                    <Text>{item.total_orders}</Text>
+                </Block>
+            )}
             
         />
         )
@@ -562,7 +568,7 @@ export default class OrderList extends React.Component{
                 }
                 {/* <List.AccordionGroup expandedId={this.state.expandedId} onAccordionPress={expandedId=>this.setState({expandedId})}>              */}
                     <FlatList keyboardShouldPersistTaps="handled"
-                        data={this.state.orderItems}
+                        data={this.state.customers}
                         keyExtractor={(item, index)=>index.toString()}
                         contentContainerStyle={{flexGrow:1,paddingBottom:15}}
                         renderItem={this._renderCustomerWise}
